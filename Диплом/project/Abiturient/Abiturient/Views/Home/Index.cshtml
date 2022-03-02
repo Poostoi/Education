@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Abiturient.Models.Summary>
+@{
+    //ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Абитуриент</title>
+</head>
+<body>
+    <h3>Поля</h3>
+    <table>
+        <tr>
+            <td>Факультет</td>
+            <td>Специальность</td>
+            <td>Обучение на</td>
+            <td></td>
+        </tr>
+       
+        @foreach (var summary in Model)
+        {
+            <tr>
+                <td>@summary.FormEducation.Content</td>
+                <td>@summary.Faculty.Content</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
